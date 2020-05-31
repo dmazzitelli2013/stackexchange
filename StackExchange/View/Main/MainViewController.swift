@@ -19,14 +19,14 @@ class MainViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupViewModel()
+
         setupButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.setNavigationBarHidden(true, animated: true)
         resetAnimation()
     }
     
@@ -34,12 +34,6 @@ class MainViewController: BaseViewController {
         super.viewDidAppear(animated)
         
         startAnimation()
-    }
-    
-    private func setupViewModel() {
-        let coordinator = MainCoordinator(navigationController)
-        viewModel = MainViewModel()
-        viewModel?.coordinator = coordinator
     }
     
     private func setupButton() {

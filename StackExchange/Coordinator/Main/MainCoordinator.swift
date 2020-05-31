@@ -10,6 +10,16 @@ import UIKit
 
 class MainCoordinator: BaseCoordinator {
     
+    override func start() {
+        let viewController = MainViewController.initFromStoryboard()
+        let viewModel = MainViewModel()
+        
+        viewModel.coordinator = self
+        viewController.viewModel = viewModel
+        
+        navigationController?.viewControllers = [viewController]
+    }
+    
     func openLoginScreen() {
         let viewController = LoginViewController.initFromStoryboard()
         let viewModel = LoginViewModel()

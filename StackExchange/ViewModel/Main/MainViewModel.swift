@@ -12,8 +12,16 @@ class MainViewModel: BaseViewModel {
     
     var coordinator: MainCoordinator?
     
+    func initialize() {
+        
+    }
+    
     func login() {
         coordinator?.openLoginScreen()
+    }
+    
+    func isAlreadyLoggedIn() -> Bool {
+        return UserData.shared.accessToken != nil
     }
     
 }
