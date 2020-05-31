@@ -13,7 +13,9 @@ class MainViewController: BaseViewController {
     @IBOutlet private weak var logoImageView: UIImageView!
     @IBOutlet private weak var loginButton: UIButton!
     
-    var viewModel: MainViewModel?
+    var viewModel: MainViewModel? {
+        didSet { viewModel?.delegate = self }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

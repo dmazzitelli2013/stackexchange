@@ -13,7 +13,9 @@ class LoginViewController: BaseViewController, WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
     
-    var viewModel: LoginViewModel?
+    var viewModel: LoginViewModel? {
+        didSet { viewModel?.delegate = self }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +26,18 @@ class LoginViewController: BaseViewController, WKNavigationDelegate {
     private func setupWebView() {
         webView.navigationDelegate = self
         
+        showLoading()
         if let urlRequest = viewModel?.urlRequest {
             webView.load(urlRequest)
         }
     }
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        hideLoading()
+    }
+    
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        if navigationAction.navigationType == .other {
+        if navigationAction.navigationType == .formSubmitted || navigationAction.navigationType == .other {
             viewModel?.processAccessToken(navigationAction.request.url)
         }
         

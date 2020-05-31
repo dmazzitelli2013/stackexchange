@@ -8,8 +8,16 @@
 
 import Foundation
 
+protocol ViewModelDelegate: class {
+    func updateIsLoading(isLoading: Bool)
+}
+
 class BaseViewModel {
     
+    private(set) var isLoading: Bool = false {
+        didSet { delegate?.updateIsLoading(isLoading: isLoading) }
+    }
     
+    weak var delegate: ViewModelDelegate?
     
 }

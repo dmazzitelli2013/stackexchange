@@ -17,6 +17,7 @@
 		6353BB64248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BB63248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift */; };
 		6353BB6624834348002FBB63 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BB6524834348002FBB63 /* LoginViewModel.swift */; };
 		6353BB6924834769002FBB63 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353BB6824834769002FBB63 /* WebKit.framework */; };
+		6361F31A24842E89003EF19E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361F31924842E89003EF19E /* LoadingView.swift */; };
 		63B14E6424832E76004BA174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6324832E76004BA174 /* AppDelegate.swift */; };
 		63B14E6624832E76004BA174 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6524832E76004BA174 /* SceneDelegate.swift */; };
 		63B14E6824832E76004BA174 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6724832E76004BA174 /* MainViewController.swift */; };
@@ -52,6 +53,7 @@
 		6353BB63248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInitializable.swift"; sourceTree = "<group>"; };
 		6353BB6524834348002FBB63 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6353BB6824834769002FBB63 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		6361F31924842E89003EF19E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		63B14E6024832E76004BA174 /* StackExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B14E6324832E76004BA174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B14E6524832E76004BA174 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6361F31724842E67003EF19E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6361F31824842E6E003EF19E /* LoadingView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6361F31824842E6E003EF19E /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				6361F31924842E89003EF19E /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		63B14E5724832E76004BA174 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +239,7 @@
 		63B14E8724832EFE004BA174 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6361F31724842E67003EF19E /* Common */,
 				63B14E8D248336CF004BA174 /* Base */,
 				63B14E8E248336D6004BA174 /* Main */,
 				6353BB5E24833FBB002FBB63 /* Login */,
@@ -411,6 +430,7 @@
 				632742D9248393D7004C6F5B /* DashboardCoordinator.swift in Sources */,
 				632742D52483937B004C6F5B /* DashboardViewController.swift in Sources */,
 				6353BB61248341ED002FBB63 /* LoginViewController.swift in Sources */,
+				6361F31A24842E89003EF19E /* LoadingView.swift in Sources */,
 				63B14E90248336ED004BA174 /* BaseViewController.swift in Sources */,
 				6353BB6624834348002FBB63 /* LoginViewModel.swift in Sources */,
 				63B14E9A24833BC1004BA174 /* MainCoordinator.swift in Sources */,

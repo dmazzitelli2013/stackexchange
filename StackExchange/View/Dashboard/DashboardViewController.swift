@@ -10,7 +10,9 @@ import UIKit
 
 class DashboardViewController: BaseViewController {
 
-    var viewModel: DashboardViewModel?
+    var viewModel: DashboardViewModel? {
+        didSet { viewModel?.delegate = self }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
