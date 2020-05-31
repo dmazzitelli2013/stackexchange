@@ -12,10 +12,6 @@ class MainViewModel: BaseViewModel {
     
     var coordinator: MainCoordinator?
     
-    func initialize() {
-        
-    }
-    
     func login() {
         coordinator?.openLoginScreen()
     }

@@ -14,7 +14,7 @@ protocol ViewModelDelegate: class {
 
 class BaseViewModel {
     
-    private(set) var isLoading: Bool = false {
+    var isLoading: Bool = false {
         didSet { delegate?.updateIsLoading(isLoading: isLoading) }
     }
     

@@ -13,6 +13,8 @@ struct Constants {
     static let SOLoginURL = "https://stackoverflow.com/oauth/dialog"
     static let SORedirectURI = "https://stackoverflow.com/oauth/login_success"
     static let SOClientID = "17995"
-    static let SOKey = "*YNIqov)py6QlarZd5k5dQ(()"
+    static let SOKey = "*YNIqov)py6QlarZd5k5dQ(("
+    static let SOAPISite = "stackoverflow"
+    static let SOAPIURL = "https://api.stackexchange.com/2.2/"
     
 }

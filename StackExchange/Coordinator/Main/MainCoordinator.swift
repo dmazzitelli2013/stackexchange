@@ -18,6 +18,10 @@ class MainCoordinator: BaseCoordinator {
         viewController.viewModel = viewModel
         
         navigationController?.viewControllers = [viewController]
+        
+        if viewModel.isAlreadyLoggedIn() {
+            startDashboard()
+        }
     }
     
     func openLoginScreen() {
@@ -32,9 +36,13 @@ class MainCoordinator: BaseCoordinator {
     
     func loginSuccess() {
         navigationController?.presentedViewController?.dismiss(animated: true, completion: {
-            let dashboardCoordinator = DashboardCoordinator(self.navigationController)
-            dashboardCoordinator.start()
+            self.startDashboard()
         })
+    }
+    
+    private func startDashboard() {
+        let dashboardCoordinator = DashboardCoordinator(navigationController)
+        dashboardCoordinator.start()
     }
     
 }

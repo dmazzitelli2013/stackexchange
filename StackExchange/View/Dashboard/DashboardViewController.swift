@@ -8,16 +8,19 @@
 
 import UIKit
 
-class DashboardViewController: BaseViewController {
+class DashboardViewController: BaseViewController, DashboardViewModelDelegate {
 
     var viewModel: DashboardViewModel? {
-        didSet { viewModel?.delegate = self }
+        didSet {
+            viewModel?.delegate = self
+            viewModel?.dashboardViewModelDelegate = self
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = NSLocalizedString("Dashboard", comment: "")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +28,12 @@ class DashboardViewController: BaseViewController {
         
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.setHidesBackButton(true, animated: false)
+        
+        viewModel?.getUser()
+    }
+    
+    func viewModelDidUpdateUser(user: User?) {
+        // TODO
     }
 
 }
