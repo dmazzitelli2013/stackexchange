@@ -12,10 +12,13 @@ class MainViewController: BaseViewController {
     
     @IBOutlet private weak var logoImageView: UIImageView!
     @IBOutlet private weak var loginButton: UIButton!
+    
+    var viewModel: MainViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViewModel()
         setupButton()
     }
     
@@ -29,6 +32,12 @@ class MainViewController: BaseViewController {
         super.viewDidAppear(animated)
         
         startAnimation()
+    }
+    
+    private func setupViewModel() {
+        let coordinator = MainCoordinator(navigationController)
+        viewModel = MainViewModel()
+        viewModel?.coordinator = coordinator
     }
     
     private func setupButton() {
@@ -51,7 +60,7 @@ class MainViewController: BaseViewController {
     }
     
     @IBAction private func loginButtonPressed() {
-        
+        viewModel?.login()
     }
     
 }

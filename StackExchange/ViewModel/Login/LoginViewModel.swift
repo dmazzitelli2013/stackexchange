@@ -1,5 +1,5 @@
 //
-//  MainViewModel.swift
+//  LoginViewModel.swift
 //  StackExchange
 //
 //  Created by David Mazzitelli on 30/05/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MainViewModel: BaseViewModel {
+class LoginViewModel: BaseViewModel {
     
     var coordinator: MainCoordinator?
     

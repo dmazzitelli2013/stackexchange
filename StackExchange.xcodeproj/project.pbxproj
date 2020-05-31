@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6353BB61248341ED002FBB63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BB60248341ED002FBB63 /* LoginViewController.swift */; };
+		6353BB64248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BB63248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift */; };
+		6353BB6624834348002FBB63 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BB6524834348002FBB63 /* LoginViewModel.swift */; };
+		6353BB6924834769002FBB63 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353BB6824834769002FBB63 /* WebKit.framework */; };
 		63B14E6424832E76004BA174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6324832E76004BA174 /* AppDelegate.swift */; };
 		63B14E6624832E76004BA174 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6524832E76004BA174 /* SceneDelegate.swift */; };
 		63B14E6824832E76004BA174 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6724832E76004BA174 /* MainViewController.swift */; };
@@ -17,6 +21,8 @@
 		63B14E8C248336B0004BA174 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E8B248336B0004BA174 /* MainViewModel.swift */; };
 		63B14E90248336ED004BA174 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E8F248336ED004BA174 /* BaseViewController.swift */; };
 		63B14E942483371E004BA174 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E932483371E004BA174 /* BaseViewModel.swift */; };
+		63B14E9824833BB1004BA174 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E9724833BB1004BA174 /* BaseCoordinator.swift */; };
+		63B14E9A24833BC1004BA174 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E9924833BC1004BA174 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6353BB60248341ED002FBB63 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6353BB63248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInitializable.swift"; sourceTree = "<group>"; };
+		6353BB6524834348002FBB63 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6353BB6824834769002FBB63 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		63B14E6024832E76004BA174 /* StackExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B14E6324832E76004BA174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B14E6524832E76004BA174 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +54,8 @@
 		63B14E8B248336B0004BA174 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		63B14E8F248336ED004BA174 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		63B14E932483371E004BA174 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		63B14E9724833BB1004BA174 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		63B14E9924833BC1004BA174 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6353BB6924834769002FBB63 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +77,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6353BB5E24833FBB002FBB63 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6353BB60248341ED002FBB63 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6353BB5F24833FDE002FBB63 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6353BB6524834348002FBB63 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6353BB622483428C002FBB63 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6353BB63248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6353BB6724834769002FBB63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6353BB6824834769002FBB63 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63B14E5724832E76004BA174 = {
 			isa = PBXGroup;
 			children = (
 				63B14E6224832E76004BA174 /* StackExchange */,
 				63B14E7924832E77004BA174 /* StackExchangeTests */,
 				63B14E6124832E76004BA174 /* Products */,
+				6353BB6724834769002FBB63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				63B14E8524832E86004BA174 /* Main */,
+				6353BB622483428C002FBB63 /* Extensions */,
 				63B14E8724832EFE004BA174 /* View */,
 				63B14E8924832F0F004BA174 /* Coordinator */,
 				63B14E8824832F07004BA174 /* ViewModel */,
@@ -129,6 +176,7 @@
 			children = (
 				63B14E8D248336CF004BA174 /* Base */,
 				63B14E8E248336D6004BA174 /* Main */,
+				6353BB5E24833FBB002FBB63 /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +186,7 @@
 			children = (
 				63B14E912483370C004BA174 /* Base */,
 				63B14E9224833710004BA174 /* Main */,
+				6353BB5F24833FDE002FBB63 /* Login */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -145,6 +194,8 @@
 		63B14E8924832F0F004BA174 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				63B14E9524833B80004BA174 /* Base */,
+				63B14E9624833B85004BA174 /* Main */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -184,6 +235,22 @@
 			isa = PBXGroup;
 			children = (
 				63B14E8B248336B0004BA174 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		63B14E9524833B80004BA174 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				63B14E9724833BB1004BA174 /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		63B14E9624833B85004BA174 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				63B14E9924833BC1004BA174 /* MainCoordinator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -289,10 +356,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6353BB61248341ED002FBB63 /* LoginViewController.swift in Sources */,
 				63B14E90248336ED004BA174 /* BaseViewController.swift in Sources */,
+				6353BB6624834348002FBB63 /* LoginViewModel.swift in Sources */,
+				63B14E9A24833BC1004BA174 /* MainCoordinator.swift in Sources */,
 				63B14E6824832E76004BA174 /* MainViewController.swift in Sources */,
 				63B14E6424832E76004BA174 /* AppDelegate.swift in Sources */,
+				6353BB64248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift in Sources */,
 				63B14E6624832E76004BA174 /* SceneDelegate.swift in Sources */,
+				63B14E9824833BB1004BA174 /* BaseCoordinator.swift in Sources */,
 				63B14E8C248336B0004BA174 /* MainViewModel.swift in Sources */,
 				63B14E942483371E004BA174 /* BaseViewModel.swift in Sources */,
 			);
