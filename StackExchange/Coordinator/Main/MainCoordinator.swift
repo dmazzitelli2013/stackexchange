@@ -20,4 +20,11 @@ class MainCoordinator: BaseCoordinator {
         navigationController?.present(viewController, animated: true, completion: nil)
     }
     
+    func loginSuccess() {
+        navigationController?.presentedViewController?.dismiss(animated: true, completion: {
+            let dashboardCoordinator = DashboardCoordinator(self.navigationController)
+            dashboardCoordinator.start()
+        })
+    }
+    
 }

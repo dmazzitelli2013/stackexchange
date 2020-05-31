@@ -16,4 +16,6 @@ class BaseCoordinator {
         self.navigationController = navigationController
     }
     
+    func start() {}
+    
 }

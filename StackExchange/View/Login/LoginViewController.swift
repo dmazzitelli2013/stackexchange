@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController, WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
     
@@ -22,9 +22,19 @@ class LoginViewController: BaseViewController {
     }
     
     private func setupWebView() {
-        guard let url = URL(string: "https://stackoverflow.com/oauth/dialog") else { return }
-        let urlRequest = URLRequest(url: url)
-        webView.load(urlRequest)
+        webView.navigationDelegate = self
+        
+        if let urlRequest = viewModel?.urlRequest {
+            webView.load(urlRequest)
+        }
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if navigationAction.navigationType == .other {
+            viewModel?.processAccessToken(navigationAction.request.url)
+        }
+        
+        decisionHandler(.allow)
     }
 
 }
