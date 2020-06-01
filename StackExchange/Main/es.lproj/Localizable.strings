@@ -8,3 +8,5 @@
 "Dashboard" = "Dashboard";
 "Welcome" = "Bienvenido";
 "Reputation" = "Reputación";
+"Badges" = "Badges";
+"USER_FETCHING_ERROR" = "Ha ocurrido un error al obtener la información del usuario.";

@@ -16,10 +16,10 @@ class DashboardBadgesTableViewCell: UITableViewCell {
     
     static let identifier = "DashboardBadgesTableViewCell"
 
-    @IBOutlet weak var badgesContainerView: UIView!
-    @IBOutlet weak var badgesGoldLabel: UILabel!
-    @IBOutlet weak var badgesSilverLabel: UILabel!
-    @IBOutlet weak var badgesBronzeLabel: UILabel!
+    @IBOutlet private weak var badgesContainerView: UIView!
+    @IBOutlet private weak var badgesGoldLabel: UILabel!
+    @IBOutlet private weak var badgesSilverLabel: UILabel!
+    @IBOutlet private weak var badgesBronzeLabel: UILabel!
     
     weak var delegate: DashboardBadgesTableViewCellDelegate?
     

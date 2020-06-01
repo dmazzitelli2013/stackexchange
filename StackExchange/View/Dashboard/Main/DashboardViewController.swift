@@ -12,12 +12,7 @@ class DashboardViewController: BaseViewController, DashboardViewModelDelegate, D
     
     @IBOutlet private weak var tableView: UITableView!
 
-    var viewModel: DashboardViewModel? {
-        didSet {
-            viewModel?.delegate = self
-            viewModel?.dashboardViewModelDelegate = self
-        }
-    }
+    var viewModel: DashboardViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +28,8 @@ class DashboardViewController: BaseViewController, DashboardViewModelDelegate, D
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.setHidesBackButton(true, animated: false)
         
+        viewModel?.delegate = self
+        viewModel?.dashboardViewModelDelegate = self
         viewModel?.getUser()
     }
     
@@ -46,10 +43,14 @@ class DashboardViewController: BaseViewController, DashboardViewModelDelegate, D
     
     func viewModelDidUpdateUser(user: User?) {
         tableView.reloadData()
+
+        if user == nil {
+            showErrorMessage(NSLocalizedString("USER_FETCHING_ERROR", comment: ""))
+        }
     }
 
     func badgesViewPressed() {
-        // TODO
+        viewModel?.goToBadges()
     }
     
     @objc private func logoutButtonPressed() {

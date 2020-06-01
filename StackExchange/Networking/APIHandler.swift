@@ -26,6 +26,35 @@ class APIHandler {
         }
     }
     
+    func getBadges(asc: Bool, page: Int, completion: @escaping([Badge]?, Bool) -> Void) {
+        let parameters = [
+            "key": Constants.SOKey,
+            "access_token": UserData.shared.accessToken,
+            "site": Constants.SOAPISite,
+            "sort": "rank",
+            "order": asc ? "asc" : "desc",
+            "page": String(page)
+        ]
+        
+        APIClient.shared.callAPI("users/1000/badges", parameters: parameters) { (response, error) in
+            if let _ = error {
+                completion(nil, false)
+            } else {
+                var badges = [Badge]()
+                if let items = response?["items"] as? [[String: Any]] {
+                    for item in items {
+                        if let badge = BadgeMapper.badgeFromJSON(item) {
+                            badges.append(badge)
+                        }
+                    }
+                }
+                
+                let hasMore = response?["has_more"] as? Bool ?? false
+                completion(badges, hasMore)
+            }
+        }
+    }
+    
     func logout(_ completion: @escaping() -> Void) {
         let api = "access-tokens/" + (UserData.shared.accessToken ?? "") + "/invalidate"
         APIClient.shared.callAPI(api) { (response, error) in

@@ -20,4 +20,11 @@ class DashboardCoordinator: BaseCoordinator {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func goToBadgesScreen(_ viewModel: DashboardViewModel) {
+        let viewController = BadgesViewController.initFromStoryboard(name: "Dashboard")
+        viewController.viewModel = viewModel
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }

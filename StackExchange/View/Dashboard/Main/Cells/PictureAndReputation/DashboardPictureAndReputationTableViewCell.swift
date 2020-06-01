@@ -12,8 +12,8 @@ class DashboardPictureAndReputationTableViewCell: UITableViewCell {
 
     static let identifier = "DashboardPictureAndReputationTableViewCell"
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var reputationLabel: UILabel!
+    @IBOutlet private weak var profileImageView: UIImageView!
+    @IBOutlet private weak var reputationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

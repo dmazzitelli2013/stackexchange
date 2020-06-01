@@ -43,5 +43,40 @@
             </objects>
             <point key="canvasLocation" x="-522" y="162"/>
         </scene>
+        <!--Badges View Controller-->
+        <scene sceneID="nKc-tS-OWA">
+            <objects>
+                <viewController storyboardIdentifier="BadgesViewController" id="U76-6j-DLr" customClass="BadgesViewController" customModule="StackExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GVn-3F-SgS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="61m-22-lR4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="U76-6j-DLr" id="wS8-Rm-nMH"/>
+                                    <outlet property="delegate" destination="U76-6j-DLr" id="Mgn-CT-qPv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rfT-7Y-Dtf" firstAttribute="trailing" secondItem="61m-22-lR4" secondAttribute="trailing" id="Gm0-s6-BbI"/>
+                            <constraint firstItem="rfT-7Y-Dtf" firstAttribute="bottom" secondItem="61m-22-lR4" secondAttribute="bottom" id="HD6-XH-06t"/>
+                            <constraint firstItem="61m-22-lR4" firstAttribute="leading" secondItem="rfT-7Y-Dtf" secondAttribute="leading" id="cSx-yz-7fx"/>
+                            <constraint firstItem="61m-22-lR4" firstAttribute="top" secondItem="rfT-7Y-Dtf" secondAttribute="top" id="wlA-mx-9xu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rfT-7Y-Dtf"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="61m-22-lR4" id="xb3-RH-1ST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daU-nb-2GT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="161"/>
+        </scene>
     </scenes>
 </document>

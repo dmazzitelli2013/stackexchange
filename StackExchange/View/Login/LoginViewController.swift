@@ -13,14 +13,18 @@ class LoginViewController: BaseViewController, WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
     
-    var viewModel: LoginViewModel? {
-        didSet { viewModel?.delegate = self }
-    }
+    var viewModel: LoginViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupWebView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel?.delegate = self 
     }
     
     private func setupWebView() {

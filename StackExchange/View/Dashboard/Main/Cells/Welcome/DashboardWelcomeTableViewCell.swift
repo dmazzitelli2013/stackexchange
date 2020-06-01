@@ -12,8 +12,8 @@ class DashboardWelcomeTableViewCell: UITableViewCell {
 
     static let identifier = "DashboardWelcomeTableViewCell"
     
-    @IBOutlet weak var welcomeLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

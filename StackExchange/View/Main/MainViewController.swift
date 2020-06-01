@@ -13,9 +13,7 @@ class MainViewController: BaseViewController {
     @IBOutlet private weak var logoImageView: UIImageView!
     @IBOutlet private weak var loginButton: UIButton!
     
-    var viewModel: MainViewModel? {
-        didSet { viewModel?.delegate = self }
-    }
+    var viewModel: MainViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +25,7 @@ class MainViewController: BaseViewController {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: true)
+        viewModel?.delegate = self
         resetAnimation()
     }
     
