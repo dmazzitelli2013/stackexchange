@@ -26,4 +26,11 @@ class APIHandler {
         }
     }
     
+    func logout(_ completion: @escaping() -> Void) {
+        let api = "access-tokens/" + (UserData.shared.accessToken ?? "") + "/invalidate"
+        APIClient.shared.callAPI(api) { (response, error) in
+            completion()
+        }
+    }
+    
 }

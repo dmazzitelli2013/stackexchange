@@ -32,5 +32,14 @@ class DashboardViewModel: BaseViewModel {
             self.isLoading = false
         })
     }
+    
+    func logout() {
+        isLoading = true
+        apiHandler?.logout {
+            UserData.shared.accessToken = nil
+            self.isLoading = false
+            self.coordinator?.goBackToMainScreen()
+        }
+    }
 
 }

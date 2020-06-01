@@ -18,4 +18,8 @@ class BaseCoordinator {
     
     func start() {}
     
+    func goBackToMainScreen() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 }

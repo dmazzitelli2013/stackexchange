@@ -17,6 +17,9 @@
 		6353BB64248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BB63248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift */; };
 		6353BB6624834348002FBB63 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353BB6524834348002FBB63 /* LoginViewModel.swift */; };
 		6353BB6924834769002FBB63 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6353BB6824834769002FBB63 /* WebKit.framework */; };
+		635E59E62484761900DCFE61 /* UIImageView+FromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E59E52484761900DCFE61 /* UIImageView+FromURL.swift */; };
+		635E59E924848AC700DCFE61 /* DashboardFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E59E824848AC700DCFE61 /* DashboardFooterView.swift */; };
+		635E59EB24848AD300DCFE61 /* DashboardFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E59EA24848AD300DCFE61 /* DashboardFooterView.xib */; };
 		6361F31A24842E89003EF19E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361F31924842E89003EF19E /* LoadingView.swift */; };
 		6361F31D2484442B003EF19E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361F31C2484442B003EF19E /* APIClient.swift */; };
 		6361F31F24844521003EF19E /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361F31E24844521003EF19E /* APIHandler.swift */; };
@@ -24,6 +27,13 @@
 		6361F32E24845A2D003EF19E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6361F33024845A2D003EF19E /* Localizable.strings */; };
 		6361F34424845C3F003EF19E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6361F34224845C3F003EF19E /* Main.storyboard */; };
 		6361F34524845C3F003EF19E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6361F34324845C3F003EF19E /* LaunchScreen.storyboard */; };
+		6361F34724845EBE003EF19E /* UITableView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361F34624845EBE003EF19E /* UITableView+Setup.swift */; };
+		6361F34B24845F19003EF19E /* DashboardWelcomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361F34924845F19003EF19E /* DashboardWelcomeTableViewCell.swift */; };
+		6361F34C24845F19003EF19E /* DashboardWelcomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6361F34A24845F19003EF19E /* DashboardWelcomeTableViewCell.xib */; };
+		6361F3522484600D003EF19E /* DashboardPictureAndReputationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361F3502484600D003EF19E /* DashboardPictureAndReputationTableViewCell.swift */; };
+		6361F3532484600D003EF19E /* DashboardPictureAndReputationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6361F3512484600D003EF19E /* DashboardPictureAndReputationTableViewCell.xib */; };
+		6361F35624846031003EF19E /* DashboardBadgesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361F35424846031003EF19E /* DashboardBadgesTableViewCell.swift */; };
+		6361F35724846031003EF19E /* DashboardBadgesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6361F35524846031003EF19E /* DashboardBadgesTableViewCell.xib */; };
 		63B14E6424832E76004BA174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6324832E76004BA174 /* AppDelegate.swift */; };
 		63B14E6624832E76004BA174 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6524832E76004BA174 /* SceneDelegate.swift */; };
 		63B14E6824832E76004BA174 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B14E6724832E76004BA174 /* MainViewController.swift */; };
@@ -57,6 +67,9 @@
 		6353BB63248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInitializable.swift"; sourceTree = "<group>"; };
 		6353BB6524834348002FBB63 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6353BB6824834769002FBB63 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		635E59E52484761900DCFE61 /* UIImageView+FromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+FromURL.swift"; sourceTree = "<group>"; };
+		635E59E824848AC700DCFE61 /* DashboardFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFooterView.swift; sourceTree = "<group>"; };
+		635E59EA24848AD300DCFE61 /* DashboardFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardFooterView.xib; sourceTree = "<group>"; };
 		6361F31924842E89003EF19E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6361F31C2484442B003EF19E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		6361F31E24844521003EF19E /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
@@ -65,6 +78,13 @@
 		6361F33224845A3C003EF19E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6361F34224845C3F003EF19E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6361F34324845C3F003EF19E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6361F34624845EBE003EF19E /* UITableView+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Setup.swift"; sourceTree = "<group>"; };
+		6361F34924845F19003EF19E /* DashboardWelcomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWelcomeTableViewCell.swift; sourceTree = "<group>"; };
+		6361F34A24845F19003EF19E /* DashboardWelcomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardWelcomeTableViewCell.xib; sourceTree = "<group>"; };
+		6361F3502484600D003EF19E /* DashboardPictureAndReputationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPictureAndReputationTableViewCell.swift; sourceTree = "<group>"; };
+		6361F3512484600D003EF19E /* DashboardPictureAndReputationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardPictureAndReputationTableViewCell.xib; sourceTree = "<group>"; };
+		6361F35424846031003EF19E /* DashboardBadgesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBadgesTableViewCell.swift; sourceTree = "<group>"; };
+		6361F35524846031003EF19E /* DashboardBadgesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardBadgesTableViewCell.xib; sourceTree = "<group>"; };
 		63B14E6024832E76004BA174 /* StackExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B14E6324832E76004BA174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B14E6524832E76004BA174 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				632742D42483937B004C6F5B /* DashboardViewController.swift */,
+				6361F34824845EFC003EF19E /* Cells */,
+				635E59E724848AB100DCFE61 /* Footer */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -153,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				6353BB63248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift */,
+				6361F34624845EBE003EF19E /* UITableView+Setup.swift */,
+				635E59E52484761900DCFE61 /* UIImageView+FromURL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +187,15 @@
 				6353BB6824834769002FBB63 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		635E59E724848AB100DCFE61 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				635E59E824848AC700DCFE61 /* DashboardFooterView.swift */,
+				635E59EA24848AD300DCFE61 /* DashboardFooterView.xib */,
+			);
+			path = Footer;
 			sourceTree = "<group>";
 		};
 		6361F31724842E67003EF19E /* Common */ = {
@@ -188,6 +221,43 @@
 				6361F31E24844521003EF19E /* APIHandler.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		6361F34824845EFC003EF19E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6361F34D24845F7E003EF19E /* Welcome */,
+				6361F34E24845F86003EF19E /* PictureAndReputation */,
+				6361F34F24845F9D003EF19E /* Badges */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6361F34D24845F7E003EF19E /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				6361F34924845F19003EF19E /* DashboardWelcomeTableViewCell.swift */,
+				6361F34A24845F19003EF19E /* DashboardWelcomeTableViewCell.xib */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		6361F34E24845F86003EF19E /* PictureAndReputation */ = {
+			isa = PBXGroup;
+			children = (
+				6361F3502484600D003EF19E /* DashboardPictureAndReputationTableViewCell.swift */,
+				6361F3512484600D003EF19E /* DashboardPictureAndReputationTableViewCell.xib */,
+			);
+			path = PictureAndReputation;
+			sourceTree = "<group>";
+		};
+		6361F34F24845F9D003EF19E /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				6361F35424846031003EF19E /* DashboardBadgesTableViewCell.swift */,
+				6361F35524846031003EF19E /* DashboardBadgesTableViewCell.xib */,
+			);
+			path = Badges;
 			sourceTree = "<group>";
 		};
 		63B14E5724832E76004BA174 = {
@@ -430,7 +500,11 @@
 				63B14E6D24832E77004BA174 /* Assets.xcassets in Resources */,
 				632742DD24839529004C6F5B /* Dashboard.storyboard in Resources */,
 				6361F34524845C3F003EF19E /* LaunchScreen.storyboard in Resources */,
+				6361F35724846031003EF19E /* DashboardBadgesTableViewCell.xib in Resources */,
+				635E59EB24848AD300DCFE61 /* DashboardFooterView.xib in Resources */,
+				6361F3532484600D003EF19E /* DashboardPictureAndReputationTableViewCell.xib in Resources */,
 				6361F34424845C3F003EF19E /* Main.storyboard in Resources */,
+				6361F34C24845F19003EF19E /* DashboardWelcomeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,11 +522,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635E59E924848AC700DCFE61 /* DashboardFooterView.swift in Sources */,
 				632742D2248391ED004C6F5B /* UserData.swift in Sources */,
 				632742D9248393D7004C6F5B /* DashboardCoordinator.swift in Sources */,
 				632742D52483937B004C6F5B /* DashboardViewController.swift in Sources */,
+				6361F34B24845F19003EF19E /* DashboardWelcomeTableViewCell.swift in Sources */,
 				6353BB61248341ED002FBB63 /* LoginViewController.swift in Sources */,
 				6361F31F24844521003EF19E /* APIHandler.swift in Sources */,
+				6361F35624846031003EF19E /* DashboardBadgesTableViewCell.swift in Sources */,
+				6361F3522484600D003EF19E /* DashboardPictureAndReputationTableViewCell.swift in Sources */,
 				6361F31A24842E89003EF19E /* LoadingView.swift in Sources */,
 				63B14E90248336ED004BA174 /* BaseViewController.swift in Sources */,
 				6353BB6624834348002FBB63 /* LoginViewModel.swift in Sources */,
@@ -460,9 +538,11 @@
 				63B14E9A24833BC1004BA174 /* MainCoordinator.swift in Sources */,
 				632742DB248393EA004C6F5B /* DashboardViewModel.swift in Sources */,
 				63B14E6824832E76004BA174 /* MainViewController.swift in Sources */,
+				6361F34724845EBE003EF19E /* UITableView+Setup.swift in Sources */,
 				63B14E6424832E76004BA174 /* AppDelegate.swift in Sources */,
 				6353BB64248342AB002FBB63 /* UIViewController+StoryboardInitializable.swift in Sources */,
 				63B14E6624832E76004BA174 /* SceneDelegate.swift in Sources */,
+				635E59E62484761900DCFE61 /* UIImageView+FromURL.swift in Sources */,
 				63B14E9824833BB1004BA174 /* BaseCoordinator.swift in Sources */,
 				63B14E8C248336B0004BA174 /* MainViewModel.swift in Sources */,
 				63B14E942483371E004BA174 /* BaseViewModel.swift in Sources */,
