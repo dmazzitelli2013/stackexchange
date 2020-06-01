@@ -36,7 +36,7 @@ class APIHandler {
             "page": String(page)
         ]
         
-        APIClient.shared.callAPI("users/1000/badges", parameters: parameters) { (response, error) in
+        APIClient.shared.callAPI("me/badges", parameters: parameters) { (response, error) in
             if let _ = error {
                 completion(nil, false)
             } else {
