@@ -10,3 +10,7 @@
 "Reputation" = "Reputation";
 "Badges" = "Badges";
 "USER_FETCHING_ERROR" = "There was an error getting user information.";
+"Rank" = "Rank";
+"Name" = "Name";
+"Descendant" = "Descendant";
+"Ascendant" = "Ascendant";

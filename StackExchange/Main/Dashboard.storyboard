@@ -52,31 +52,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="61m-22-lR4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="194" width="414" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="U76-6j-DLr" id="wS8-Rm-nMH"/>
                                     <outlet property="delegate" destination="U76-6j-DLr" id="Mgn-CT-qPv"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ype-oV-bhi">
+                                <rect key="frame" x="0.0" y="132" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Rank"/>
+                                    <segment title="Name"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updatedSortControl" destination="U76-6j-DLr" eventType="valueChanged" id="rJj-Ww-rla"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ao5-OB-pCa">
+                                <rect key="frame" x="0.0" y="163" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Descendant"/>
+                                    <segment title="Ascendant"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updatedOrderControl" destination="U76-6j-DLr" eventType="valueChanged" id="Rqp-Y7-Yfx"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-Vh-9jD">
+                                <rect key="frame" x="20" y="98" width="374" height="24"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="HdE-Vh-9jD" firstAttribute="leading" secondItem="rfT-7Y-Dtf" secondAttribute="leading" constant="20" id="CYH-Ex-Udc"/>
                             <constraint firstItem="rfT-7Y-Dtf" firstAttribute="trailing" secondItem="61m-22-lR4" secondAttribute="trailing" id="Gm0-s6-BbI"/>
                             <constraint firstItem="rfT-7Y-Dtf" firstAttribute="bottom" secondItem="61m-22-lR4" secondAttribute="bottom" id="HD6-XH-06t"/>
+                            <constraint firstItem="ao5-OB-pCa" firstAttribute="top" secondItem="ype-oV-bhi" secondAttribute="bottom" id="JZC-Av-nhu"/>
+                            <constraint firstItem="rfT-7Y-Dtf" firstAttribute="trailing" secondItem="HdE-Vh-9jD" secondAttribute="trailing" constant="20" id="Sxj-MA-kzm"/>
                             <constraint firstItem="61m-22-lR4" firstAttribute="leading" secondItem="rfT-7Y-Dtf" secondAttribute="leading" id="cSx-yz-7fx"/>
-                            <constraint firstItem="61m-22-lR4" firstAttribute="top" secondItem="rfT-7Y-Dtf" secondAttribute="top" id="wlA-mx-9xu"/>
+                            <constraint firstItem="ype-oV-bhi" firstAttribute="top" secondItem="HdE-Vh-9jD" secondAttribute="bottom" constant="10" id="eje-C1-dB8"/>
+                            <constraint firstItem="ype-oV-bhi" firstAttribute="leading" secondItem="rfT-7Y-Dtf" secondAttribute="leading" id="mJq-aN-jbO"/>
+                            <constraint firstItem="HdE-Vh-9jD" firstAttribute="top" secondItem="rfT-7Y-Dtf" secondAttribute="top" constant="10" id="nZH-8P-p0Z"/>
+                            <constraint firstItem="ao5-OB-pCa" firstAttribute="trailing" secondItem="rfT-7Y-Dtf" secondAttribute="trailing" id="pDm-ya-RpB"/>
+                            <constraint firstItem="ao5-OB-pCa" firstAttribute="leading" secondItem="rfT-7Y-Dtf" secondAttribute="leading" id="qFd-ML-LPx"/>
+                            <constraint firstItem="rfT-7Y-Dtf" firstAttribute="trailing" secondItem="ype-oV-bhi" secondAttribute="trailing" id="s3B-nS-zjS"/>
+                            <constraint firstItem="61m-22-lR4" firstAttribute="top" secondItem="ao5-OB-pCa" secondAttribute="bottom" id="yuy-9k-WRw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rfT-7Y-Dtf"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="orderSegmentedControl" destination="ao5-OB-pCa" id="rol-dl-663"/>
+                        <outlet property="sortSegmentedControl" destination="ype-oV-bhi" id="MTH-hR-Eu8"/>
                         <outlet property="tableView" destination="61m-22-lR4" id="xb3-RH-1ST"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daU-nb-2GT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="161"/>
+            <point key="canvasLocation" x="213.04347826086959" y="160.71428571428569"/>
         </scene>
     </scenes>
 </document>

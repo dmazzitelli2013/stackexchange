@@ -26,13 +26,13 @@ class APIHandler {
         }
     }
     
-    func getBadges(asc: Bool, page: Int, completion: @escaping([Badge]?, Bool) -> Void) {
+    func getBadges(desc: Bool, byRank: Bool, page: Int, completion: @escaping([Badge]?, Bool) -> Void) {
         let parameters = [
             "key": Constants.SOKey,
             "access_token": UserData.shared.accessToken,
             "site": Constants.SOAPISite,
-            "sort": "rank",
-            "order": asc ? "asc" : "desc",
+            "sort": byRank ? "rank" : "name",
+            "order": desc ? "desc" : "asc",
             "page": String(page)
         ]
         

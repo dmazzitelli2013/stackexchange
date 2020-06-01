@@ -10,6 +10,8 @@ import UIKit
 
 class BadgesViewController: BaseViewController, DashboardViewModelDelegate {
 
+    @IBOutlet private weak var sortSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var orderSegmentedControl: UISegmentedControl!
     @IBOutlet private weak var tableView: UITableView!
     
     var viewModel: DashboardViewModel?
@@ -19,11 +21,19 @@ class BadgesViewController: BaseViewController, DashboardViewModelDelegate {
 
         title = NSLocalizedString("Badges", comment: "")
         
+        setupSegmentedControls()
         setupTableView()
         
         viewModel?.delegate = self
         viewModel?.dashboardViewModelDelegate = self
         viewModel?.getBadges()
+    }
+    
+    private func setupSegmentedControls() {
+        sortSegmentedControl.setTitle(NSLocalizedString("Rank", comment: ""), forSegmentAt: 0)
+        sortSegmentedControl.setTitle(NSLocalizedString("Name", comment: ""), forSegmentAt: 1)
+        orderSegmentedControl.setTitle(NSLocalizedString("Descendant", comment: ""), forSegmentAt: 0)
+        orderSegmentedControl.setTitle(NSLocalizedString("Ascendant", comment: ""), forSegmentAt: 1)
     }
     
     private func setupTableView() {
@@ -51,6 +61,32 @@ class BadgesViewController: BaseViewController, DashboardViewModelDelegate {
         if let isLoading = viewModel?.isLoadingMoreBadges, !isLoading, let hasMore = viewModel?.hasMoreBadges, hasMore {
             viewModel?.loadMoreBadges()
         }
+    }
+    
+    @IBAction private func updatedSortControl() {
+        switch sortSegmentedControl.selectedSegmentIndex {
+        case 0:
+            viewModel?.loadBadgesByRank = true
+            break
+        default:
+            viewModel?.loadBadgesByRank = false
+        }
+        
+        viewModel?.getBadges()
+        tableView.reloadData()
+    }
+    
+    @IBAction private func updatedOrderControl() {
+        switch orderSegmentedControl.selectedSegmentIndex {
+        case 0:
+            viewModel?.loadBadgesDesc = true
+            break
+        default:
+            viewModel?.loadBadgesDesc = false
+        }
+        
+        viewModel?.getBadges()
+        tableView.reloadData()
     }
 
 }

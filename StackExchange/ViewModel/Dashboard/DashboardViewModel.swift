@@ -27,6 +27,8 @@ class DashboardViewModel: BaseViewModel {
     var currentBadgesPage: Int = 1
     var hasMoreBadges: Bool = false
     var isLoadingMoreBadges: Bool = false
+    var loadBadgesByRank: Bool = true
+    var loadBadgesDesc: Bool = true
     
     weak var dashboardViewModelDelegate: DashboardViewModelDelegate?
     
@@ -52,7 +54,7 @@ class DashboardViewModel: BaseViewModel {
         isLoading = true
         badges.removeAll()
         currentBadgesPage = 1
-        apiHandler?.getBadges(asc: true, page: currentBadgesPage, completion: { (badges, hasMore) in
+        apiHandler?.getBadges(desc: loadBadgesDesc, byRank: loadBadgesByRank, page: currentBadgesPage, completion: { (badges, hasMore) in
             if let badges = badges {
                 self.badges.append(contentsOf: badges)
                 self.dashboardViewModelDelegate?.viewModelDidUpdateBadges(badges: badges)
@@ -65,7 +67,7 @@ class DashboardViewModel: BaseViewModel {
     func loadMoreBadges() {
         isLoadingMoreBadges = true
         currentBadgesPage += 1
-        apiHandler?.getBadges(asc: true, page: currentBadgesPage, completion: { (badges, hasMore) in
+        apiHandler?.getBadges(desc: loadBadgesDesc, byRank: loadBadgesByRank, page: currentBadgesPage, completion: { (badges, hasMore) in
             if let badges = badges, badges.count > 0 {
                 self.badges.append(contentsOf: badges)
                 self.dashboardViewModelDelegate?.viewModelDidUpdateBadges(badges: badges)
